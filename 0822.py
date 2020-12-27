@@ -53,6 +53,31 @@ def ex4():
     # print(text)
 # 태그로 뽑는 걸 했으면 "태그 안 value 불러오기"
  
+def ex5():
+    bs = BeautifulSoup(html, 'html.parser')
+    tag = bs.select("td")[0]
+    # print("[div.extract]",tag)
 
+    # print(tag)
 
-ex4()
+    div_elements = tag.find_all("div")
+    print("[div_elements]",div_elements)
+    for div in div_elements:
+        # div.extract()
+        print(str(div) + '\n')
+        
+def fc1():
+    bs = BeautifulSoup(html,'html.parser')
+    # tag=bs.find_all(attrs={'class':'a'})
+    tag = bs.select("a")
+    
+    # print(tag)
+    for val in tag:
+        print(val.contents[0])
+
+# import requests
+# def req_html():
+
+#     response = requests.get(url="https://pedia.watcha.com/ko-KR/contents/my5YK3O")
+#     print(response.text)
+fc1()

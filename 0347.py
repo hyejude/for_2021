@@ -23,5 +23,3 @@ print(soup.find_all(re.compile("h[1-9]")))
 print(soup.find_all(['h1','p']))
 # html 속성 활용하기
 print(soup.find_all(attrs={'class':'card-title','id':'footer-address-list'}))
-
-
